@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emma - El Cumpleaños de nuestra K-pop Monster Hunter</title>
+    <title>Cumple Emma</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     
@@ -141,8 +141,7 @@
 <body class="antialiased min-h-screen flex items-center justify-center relative">
 
     <div class="bg-slideshow">
-        <div class="bg-slide active" style="background-image: url('image.png');" id="slide1"></div>
-        <div class="bg-slide" style="background-image: url('image_2.png');" id="slide2"></div>
+        <div class="bg-slide active bg-purple-900/20" style="background-image: url('image_3.png');" id="slide1"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-purple-900/50 to-black/90"></div>
     </div>
 
@@ -164,19 +163,16 @@
                 EMMA
             </h1>
             
-            <!-- Galería tipo "Photocard" K-pop -->
-            <div class="flex gap-6 mb-10 justify-center">
-                <div class="w-28 h-28 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-purple-500/40 shadow-[0_0_30px_rgba(168,85,247,0.5)] animate-heartbeat hover:scale-110 transition-transform duration-300" style="animation-delay: 0s;">
-                    <img src="image.png" alt="Emma Dibujo" class="w-full h-full object-cover object-center">
-                </div>
-                <div class="w-28 h-28 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-pink-500/40 shadow-[0_0_30px_rgba(236,72,153,0.5)] animate-heartbeat hover:scale-110 transition-transform duration-300" style="animation-delay: 1s;">
-                    <img src="image_2.png" alt="Emma K-pop" class="w-full h-full object-cover object-top">
+            <!-- Galería tipo "Photocard" K-pop (Ahora solo una imagen) -->
+            <div class="flex mb-10 justify-center">
+                <div class="w-36 h-36 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-purple-500/40 shadow-[0_0_30px_rgba(168,85,247,0.5)] animate-heartbeat hover:scale-110 transition-transform duration-300 bg-purple-800">
+                    <img src="https://www.miyagi.es/53844-medium_default/peluches-kpop-demon-hunters-rumi-mira-zoey.jpg" alt="Emma Demon Hunter" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://placehold.co/400x400/2a103c/a855f7?text=EMMA';">
                 </div>
             </div>
 
             <!-- Mensaje de cuenta atrás -->
-            <h2 class="text-lg sm:text-xl text-gray-300 mb-6 font-medium tracking-wide">
-                TIEMPO RESTANTE PARA SU GRAN DÍA
+            <h2 class="text-lg sm:text-xl text-gray-300 mb-6 font-medium tracking-wide uppercase">
+                Tiempo restante para "Cumple Emma"
             </h2>
 
             <div id="countdown-container" class="flex flex-wrap justify-center gap-3 sm:gap-6 w-full">
@@ -212,7 +208,7 @@
 
             <!-- Pie de tarjeta -->
             <div class="mt-12 text-gray-300 text-lg sm:text-xl font-medium flex items-center justify-center gap-3 drop-shadow-md">
-                <span>Nuestra K-pop Monster Hunter</span> 
+                <span>Nuestra K-pop Demon Hunter</span> 
                 <span class="animate-pulse text-purple-400 text-2xl">💜</span>
             </div>
 
@@ -220,24 +216,7 @@
     </main>
 
     <script>
-        // --- 1. Lógica del Slideshow de Fondo ---
-        const slide1 = document.getElementById('slide1');
-        const slide2 = document.getElementById('slide2');
-        let currentSlide = 1;
-
-        setInterval(() => {
-            if (currentSlide === 1) {
-                slide1.classList.remove('active');
-                slide2.classList.add('active');
-                currentSlide = 2;
-            } else {
-                slide2.classList.remove('active');
-                slide1.classList.add('active');
-                currentSlide = 1;
-            }
-        }, 5000); // Cambia de imagen cada 5 segundos
-
-        // --- 2. Lógica de la Cuenta Atrás ---
+        // --- 1. Lógica de la Cuenta Atrás ---
         function updateCountdown() {
             const now = new Date();
             let targetYear = now.getFullYear();
